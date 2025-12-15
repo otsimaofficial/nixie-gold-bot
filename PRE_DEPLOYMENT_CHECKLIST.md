@@ -255,6 +255,12 @@ If everything is checked:
 
 ---
 
+### CI / Deployment note 🔧
+
+- The `MetaTrader5` dependency is Windows-only and the project uses environment markers so non-Windows runners will skip it. Ensure any CI or deployment runner that needs to run the live trader is a Windows runner (or explicitly installs `MetaTrader5`), otherwise the live-trading step will not work on non-Windows runners.
+
+---
+
 **Questions before deploying?**
 
 - Review: [README.md](README.md)

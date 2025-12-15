@@ -122,7 +122,7 @@ The bot only generates a signal when ALL these conditions are met:
 
 Before you begin, make sure you have:
 
-- **Python 3.11.9** installed ([Download here](https://www.python.org/downloads/))
+- **Python 3.11.x** installed (recommended; see note below) ([Download here](https://www.python.org/downloads/))
 - **MetaTrader 5** platform ([Download here](https://www.metatrader5.com/))
 - **Trading account** (demo or live) with a broker that offers XAUUSDm (Exness)
 - **Telegram account** for receiving signals
@@ -206,6 +206,20 @@ pip install -r requirements.txt
 3. Login to MT5
 4. Verify `XAUUSDm` symbol exists in Market Watch
 5. Enable algo trading: Tools → Options → Expert Advisors → Allow automated trading
+
+---
+
+## Platform-specific notes ⚠️
+
+- The `MetaTrader5` Python package is distributed as a native Windows package and is not available on macOS/Linux via PyPI. Attempting to install it on macOS/Linux will make `pip install -r requirements.txt` fail.
+- If you're developing on macOS/Linux, skip installing `MetaTrader5` locally. It is optional for backtesting and most development tasks.
+- To run live trading that connects to MetaTrader, use a Windows environment (local or VM) and install `MetaTrader5` there:
+
+```bash
+pip install MetaTrader5
+```
+
+- Recommended Python: use Python 3.11 for best compatibility with native dependencies.
 
 ### Step 5: Create Telegram Bot
 
