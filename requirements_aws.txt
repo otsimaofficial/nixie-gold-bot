@@ -1,3 +1,4 @@
+# Minimal requirements for AWS Free Tier
 pandas>=2.0.0
 numpy>=1.24.0
 MetaTrader5>=5.0.45; sys_platform == 'win32'  # Windows-only: native MetaTrader5 package is only distributed for Windows
